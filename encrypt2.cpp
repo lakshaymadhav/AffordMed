@@ -19,7 +19,7 @@ void compress(string s)
             n++;
         }
     }
-    cout<<"compressed: "+ans;
+    cout<<ans;
 }
 void decompress(string s)
 {
@@ -49,22 +49,18 @@ void decompress(string s)
 int main(){
     string s;
     cin>>s;
-    int ch,chn;
+    int chn;
     cout<<"1.compress\n";
     cout<<"2.decompress\n";
     cin>>chn;
-    do
-    {
-        switch (ch)
+    switch (chn)
     {
     case 1:
         compress(s);
         break;
     case 2:
-    decompress(s);
-    break;
+        decompress(s);
+        break;
     }
-    } while (chn==1);
-    
     
 }
