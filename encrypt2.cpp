@@ -11,7 +11,10 @@ void compress(string s)
         if(s[i]!=s[i+1])
         {
             ans+=s[i];
+            if(n==1){}
+            else{
             ans+=to_string(n);
+            }
             n=1;
         }
         else
@@ -19,6 +22,7 @@ void compress(string s)
             n++;
         }
     }
+    
     cout<<ans;
 }
 void decompress(string s)
@@ -29,9 +33,13 @@ void decompress(string s)
     string a1;
     for(int i=0;i<si;i++)
     {
+        
         if(s[i]>='a' && s[i]<='z' || s[i]>='A' && s[i]<='Z')
         {
             a1 =s[i];
+            
+            ans+=a1;
+            
         }
         else
         {
